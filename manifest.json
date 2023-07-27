@@ -1,0 +1,51 @@
+{
+	"name": "APW Ebook IFrame editor",
+	"version": "1.0",
+	"manifest_version": 2,
+
+	"description": "Increases the height of the APW Ebook IFrame",
+    "developer": {
+        "name": "John Montgomery",
+        "url": "mailto:j.ace.svg@gmail.com"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+
+    "browser_action": {
+        "default_icon": "icon128.png",
+        "icons":{
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        },
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "js": ["docHeight.js"],
+            "css": ["docHeight.css"],
+            "matches": ["https://www.highschool.bfwpub.com/*"],
+            "match_origin_as_fallback": true
+        },
+        {
+            "css": ["topPadding.css"],
+            "matches": ["https://immersive.bfwpub.com/*"],
+            "all_frames": true
+        }
+    ],
+    
+    "web_accessible_resources": [
+        "docHeight.css",
+        "outerIframe.css",
+        "innerIframe.css"
+    ],
+
+    "permissions": [
+        "storage",
+        "https://www.highschool.bfwpub.com/*"
+    ]
+}

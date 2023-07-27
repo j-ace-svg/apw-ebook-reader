@@ -1,0 +1,25 @@
+#document-body-iframe {
+    min-height: var(--i-frame-height, 600px) !important;
+}
+
+.sc-jKJlTe.ZVGHw {
+    min-height: 100% !important;
+}
+
+/* Customizations for the reader */
+
+#content-item {
+    background-color: #1e1e1e !important;
+}
+
+#fne-header {
+    background-color: #3c3c3c !important;
+}
+
+#fne-title {
+    color: #cccccc !important;
+}
+
+#note-spinner {
+    padding-left: 45px !important;
+}
